@@ -1,0 +1,264 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 10vh;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  text-decoration: none;
+}
+
+.nav-links, .logo-container, .cart {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo-container {
+  flex: 1;
+  margin-top: 5px;
+}
+
+.logo-container h4 {
+  padding-top: 3.5rem;
+}
+
+.logo-container img {
+  padding-top: 2rem;
+  margin-top: 40px;
+}
+
+.logo {
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+nav {
+  flex: 2;
+}
+
+.cart {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-link {
+  color: #5f5f79;
+  font-size: 18px;
+}
+
+#presentation {
+  display: flex;
+  min-height: 80vh;
+  margin: auto;
+  width: 90%;
+  align-items: center;
+}
+
+.showcase {
+  width: 60vw;
+  flex: 1;
+}
+
+.showcase img {
+  width: 100%;
+  transform: scale(0.85);
+  transition: transform 250ms ease-in-out;
+}
+
+.showcase img:hover, .showcase img:focus {
+  transform: scale(1);
+}
+
+.introduction {
+  flex: 1;
+  display: flex;
+  margin-top: 2.5em;
+  flex-direction: column;
+}
+
+.intro-text h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+  background: linear-gradient(to right, #1d1d33, #535388);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+  margin-top: 0.3125em;
+  font-size: 1.375em;
+  color: #14131b;
+}
+
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.125em;
+  margin-bottom: 2.125em;
+}
+
+#products {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25vw;
+  object-fit: contain;
+}
+
+#products img {
+  width: 40%;
+}
+
+.product {
+  transform: scale(0.85);
+  transition: transform 250ms ease-in-out;
+  position: relative;
+}
+
+.product:hover, .product:focus {
+  transform: scale(1);
+}
+
+.product::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  background: #28285a;
+  z-index: -1;
+}
+
+.btn {
+  background: #28285a;
+  color: white;
+  height: 3.125em;
+  width: 9.375em;
+  border: none;
+  border-radius: 1.5em;
+  font-size: 1.1em;
+  margin: 1.875em 0em 0em 1.875em;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: .9;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe h2 {
+  font-size: 2.1em;
+  margin-bottom: 1.125em;
+  background: linear-gradient(to right, #1d1d33, #535388);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.recipe p {
+  margin-top: 3.125em;
+}
+
+#make-your-own {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2.375em;
+}
+
+#make-your-own > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+#mailing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 9em;
+}
+
+#mailing h3 {
+  font-size: 1.8em;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+#mailing input[type='email'] {
+  max-width: 40.1875em;
+  width: 100%;
+  padding: 0.3125em;
+}
+
+#mailing input[type='submit'] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  margin-top: 1em;
+  border: 0;
+  background-color: #28285a;
+  border-radius: .5em;
+}
+
+#mailing input[type='submit']:hover {
+  background-color: #33336d;
+  transition: background-color 1s;
+}
+
+@media screen and (max-width: 1024px) {
+  .showcase {
+    display: none;
+  }
+  .introduction {
+    width: 100vw;
+    align-items: center;
+  }
+  #products {
+    width: 70vw;
+  }
+  #presentation {
+    margin-top: 2.5em;
+  }
+  #make-your-own {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #make-your-own p {
+    margin-left: 2em;
+  }
+}
